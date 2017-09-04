@@ -1,0 +1,48 @@
+<div class="container" ng-controller="BlogController" ng-init="getAllBlogUsers(); dontshow= true; com=false">
+ 
+ 
+  <div class="panel panel-danger"  ng-repeat="bg in blogs">
+    <div class="panel-heading" style="background-color:lightgreen" ng-click="dontshow = !dontshow">
+   	Title  &nbsp;&nbsp; {{bg.title}}
+   <label  class="pull-right">---</label>
+    </div>
+    <div class="panel-body"  ng-show="dontshow == true">
+   <h5>Content &nbsp;&nbsp; {{bg.content}}</h5>
+   <h5>PostedOn &nbsp;&nbsp; {{bg.postedOn}}</h5>
+   
+   
+					<div class="row">
+						<button class="btn btn-success"
+							 ng-click="updateblog(bg)">Update</button></div>
+			
+			
+			<div ng-if="modal" style="background:rgba(0,0,0,0.1);position:fixed;left:0;top:0;overflow-y:auto;width:100%;height:100%;">
+				<div class="container">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Title: <input type="text" ng-model="modalBlog.title">
+							<button class="btn bn-md btn-danger pull-right" ng-click="close()">X</button>
+						</div>
+						<div class="panel-body">
+							<textarea  ng-model="modalBlog.content" style="width:100%;" rows="5"></textarea>
+					
+					        <button class="btn bn-md btn-primary pull-right" ng-click="update(modalBlog)">save</button>
+				</div>	
+				
+			</div>
+			
+				</div> 			
+ 
+  		 </div>
+    <div class="panel-footer" ng-show="dontshow == true">
+    <div  ng-show="com==true"></div>
+    
+    <h5>PostedBy&nbsp;&nbsp;{{bg.postedby}}</h5>
+    <h5 ng-click="com=!com">Comments</h5>
+    <div ng-show="com== true">
+    	<textarea style="width:25%;" ng-model="bg.comment"></textarea>
+    	<button ng-click="add( bg.comment , bg.id )">AddComment</button>
+    </div>
+    </div>
+  
+

@@ -1,0 +1,7 @@
+@CHARSET "ISO-8859-1";
+#log
+{
+	position:absolute;
+	left:50%;
+	border:1px solid black;
+}

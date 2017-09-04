@@ -1,0 +1,50 @@
+
+<div class="container" ng-controller="BlogController">
+
+
+	  <div class="row" ng-init="getAllPendingBlogs()">
+		<div class="col-md-8 col-md-offset-2" ng-repeat="blog in blogg">
+			<div class="panel panel-primary">
+				<div class="panel-heading" id="row2">
+					<h3 class="panel-title">
+						<b>{{blog.title}}</b>
+					</h3>
+					<span class="pull-right clickable"><i
+						class="glyphicon glyphicon-chevron-up"></i></span>
+				</div>
+
+
+				<div class="panel-body" id="row1">
+				   <div class="row">
+				      <div class="col-xs-12 col-sm-5">
+				
+				         {{blog.content}}
+				
+				</div>			
+				
+			 </div>										
+		   </div>
+
+					<div class="row" style="margin-left: 45%; margin-top: 10px;">
+						<button type="button" class="btn btn-success btn-md"
+							 ng-click="enable(blog.id)">Enable</button></div>
+							 
+							 
+							 
+							 
+							<div class="row" style="margin-top:6px;">
+					<div class="col-xs-12 col-md-12" style="text-align: right;">
+						<div class="panel-footer">
+
+
+							<b><i>Date</i></b> : {{blog.PostedOn}} <b><i>Posted by</i></b> :
+							{{blog.postedby}}
+						</div>
+
+					</div>
+
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>

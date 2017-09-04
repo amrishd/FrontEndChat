@@ -1,0 +1,67 @@
+		<div class="container"   ng-controller="JobController"style="width:50%; height:80%; position:absolute;left:25%;border:1px solid black;background-color:#648880;background: linear-gradient(to top, #293f50, #f6f1d3, #648880 85%);">>
+			<div class="row main" style="width:90%; position:absolute; left:8%">
+			<h3 align="center">JOB DETAIL FORM</h3>
+				<div class="main-login main-center">
+				
+					<form method="post" ng-submit="save()">
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Job Title</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"></span>
+									<input type="text" ng-model="job.jobtitle" class="form-control" name="name" id="name"  placeholder="Enter your Job title"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Description</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"></span>
+									<input type="text" ng-model="job.description" class="form-control" name="description" id="description"  placeholder="Enter Job Discription"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Company Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"></span>
+									<input type="text" ng-model="job.companyname" class="form-control" name="companyname" id="companyname"  placeholder="Enter Company Name"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Location</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"></span>
+									<input type="text" ng-model="job.location" class="form-control" name="location" id="location"  placeholder="Enter The Location"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label"> YearsOfExperience</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"></span>
+									<input type="number" class="form-control" name="yearsofexperience" id="yearsofexperience"  placeholder="Years Of Experience"  ng-model="job.yearsofexperience"/>
+								</div>
+							</div>
+						</div>
+						
+
+						<div class="form-group ">
+							<input type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button" value="Submit">
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+

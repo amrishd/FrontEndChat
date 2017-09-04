@@ -1,0 +1,32 @@
+ <div class="login-wrap" ng-controller="UserController">
+	<form name="myForm" ng-submit="log()" ng-show="!islogin">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"><a href="#!/">Sign Up</a></label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label">Username</label>
+					<input type="text"  id="user" class="input" name="username" ng-model="User.username" required>
+					<span style="color: red"  ng-show="myForm.username.$dirty &&  myForm.username.$invalid ">
+          			<span ng-show="myForm.username.$error.required">Username is required</span>
+		            </span>
+	            </div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input type="password"	id="pass" class="input"  name="password" ng-model="User.password" required> 
+		            <span	style="color: red" ng_show="myForm.password.$dirty &&  myForm.password.$invalid"> 
+		 	        <span	ng-show="myForm.password.$error"> Password is required </span>
+		            </span>
+		       </div>
+				<div class="group">
+					<input type="submit" class="button" value="SIGN IN">
+				</div>
+			</div>
+		</div>
+	</div>
+	</form>
+</div>
+   
+  
+

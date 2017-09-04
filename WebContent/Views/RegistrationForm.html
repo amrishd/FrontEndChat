@@ -1,0 +1,138 @@
+<div class="contanier" ng-controller="UserController" style="width:50%; height:150%; position:absolute;left:25%;border:1px solid black;background-color:#648880;background: linear-gradient(to top, #293f50, #f6f1d3, #648880 85%);">
+ <div class="row main" style="width:90%; position:absolute; left:11%">
+ <h3 align="center">REGISTRATION FORM</h3>
+   <div class="main-login main-center">
+	 <form method="post" ng-submit="register()">
+		<div class="form-group" id="fname">
+		  <label for="fName" class="cols-sm-2 control-label">FirstName</label>
+			<div class="cols-sm-10">
+			  <div class="input-group">
+				<span class="input-group-addon"></span>
+					<input type="text" ng-model="User.fName" class="form-control" name="fName" id="fName"  placeholder="Enter your Job title"/>
+			  </div>
+		    </div>
+		</div>
+        <div class="form-group">
+		  <label for="lName" class="cols-sm-2 control-label">LastName</label>
+			<div class="cols-sm-10">
+			  <div class="input-group">
+				<span class="input-group-addon"></span>
+					<input type="text" ng-model="User.lName" class="form-control" name="lName" id="lName"  placeholder="Enter your Job title"/>
+			  </div>
+		    </div>
+		</div>                         
+        <div class="form-group">
+		  <label for="username" class="cols-sm-2 control-label">UserName</label>
+			<div class="cols-sm-10">
+			  <div class="input-group">
+				<span class="input-group-addon"></span>
+					<input type="text"  ng-model="User.username" class="form-control" name="username" id="username"  placeholder="Enter your Job title"/>
+			  </div>
+		    </div>
+		</div>                         
+        <div class="form-group">
+		  <label for="password" class="cols-sm-2 control-label">Password</label>
+			<div class="cols-sm-10">
+			  <div class="input-group">
+				<span class="input-group-addon"></span>
+					<input type="text"  ng-model="User.password" class="form-control" name="password" id="password"  placeholder="Enter your Job title"/>
+			  </div>
+		    </div>
+		</div>                         
+        <div class="form-group">
+		  <label for="email" class="cols-sm-2 control-label">Email</label>
+			<div class="cols-sm-10">
+			  <div class="input-group">
+				<span class="input-group-addon"></span>
+					<input type="text"  ng-model="User.email"  class="form-control" name="email" id="email"  placeholder="Enter your Job title"/>
+			  </div>
+		    </div>
+		</div>                         
+        <div class="form-group">
+		  <label for="dateofbirth" class="cols-sm-2 control-label">DateOfBirth</label>
+			<div class="cols-sm-10">
+			  <div class="input-group">
+				<span class="input-group-addon"></span>
+					<input type="text"  ng-model="User.dateofbirth" class="form-control" name="dateofbirth" id="dateofbirth"  placeholder="Enter your Job title"/>
+			  </div>
+		    </div>
+		</div>                         
+        <div class="form-group">
+           <label for="city">City</label>
+             <select class="form-control"name="city" ng-model="User.city" id="city">
+     				<option>SANGAMNER</option>
+    				<option>AURANGABAD</option>
+    				<option>PUNE</option>
+    				<option>AMARAVTI</option>
+    			    <option>DELHI</option>
+   				    <option>KANPUR</option>
+         			<option>NAGPUR</option>
+                    <option>NASHIK</option>
+                    <option>SHIRPUR</option>
+                    <option>CHOPDA</option>
+                    <option>JALGAON</option>
+             </select>
+		</div>
+        <div class="form-group">
+           <label for="country">Country</label>
+             <select class="form-control" name="country" ng-model="User.country" id="country">
+     				<option>SHRILANKA</option>
+                    <option>AUSTRALLIA</option>
+                    <option>AMERICA</option>
+                    <option>DUBAI</option>
+                    <option>SINGAPUR</option>
+                    <option>ENGLAND</option>
+                    <option>ROME</option>
+             </select>
+		</div>
+        <div class="form-group">
+		  <label for="mobileno" class="cols-sm-2 control-label">MobileNumber</label>
+			<div class="cols-sm-10">
+			  <div class="input-group">
+				<span class="input-group-addon"></span>
+					<input type="text"  ng-model="User.mobileno" class="form-control" name="mobileno" id="mobileno"  placeholder="Enter your Job title"/>
+			  </div>
+		    </div>
+		</div>                         
+        <div class="form-group">
+		  <label for="registeredon" class="cols-sm-2 control-label">RegistrationDate</label>
+			<div class="cols-sm-10">
+			  <div class="input-group">
+				<span class="input-group-addon"></span>
+					<input type="text"  ng-model="User.registeredon" class="form-control" name="registeredon" id="registeredon"  placeholder="Enter your Job title"/>
+			  </div>
+		    </div>
+		</div>                         
+        <div class="form-group">
+		  <label for="role" class="cols-sm-2 control-label">UserRole</label>
+			<div class="cols-sm-10">
+			  <div class="input-group">
+				<span class="input-group-addon"></span>
+					<input type="text" ng-model="User.role" class="form-control" name="role" id="role"  placeholder="Enter your Job title"/>
+			  </div>
+		    </div>
+		</div>                         
+        <div>
+	        <label class="radio-inline">
+	      		<input type="radio" name="gender" value="M">Male
+	    	</label>
+	    	<label class="radio-inline">
+      			<input type="radio" name="gender" value="F">Female
+	    	</label>
+	    	<label class="radio-inline">
+	      		<input type="radio" name="gender" value="O">Other
+	    	</label>
+	  	</div>
+		<br><br>
+        <div class="form-group ">
+				<input type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button" value="Submit">
+		</div>
+	</form>
+  </div>
+ </div>
+</div>
+
+
+
+
+        

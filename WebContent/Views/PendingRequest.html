@@ -1,0 +1,12 @@
+<div class="container">
+<table class="table" ng-controller="FriendController">
+<tr ng-repeat="pr in listofPendingRequests">
+<td>{{pr.fromId}}</td>
+<td><img src="http://localhost:8085/chatroom/getPic/default/" class="img-circle img-responsive" width="100px" height="100px"></td>
+<td><a ng-click="updatePendingRequest(pr.fromId,'A')"
+class="btn btn-default">Accept</a></td>
+<td><a  ng-click="updatePendingRequest(pr.fromId,'D')"
+class="btn btn-default">Reject</a></td>
+</tr>
+</table>
+</div>
